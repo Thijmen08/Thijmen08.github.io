@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Pagina</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <h1>Quizz Bizz</h1>
+      <nav>
+        <button onclick="toggleDarkMode()">Light/Dark</button>
+        <button onclick="showHighScores()">Highscores</button>
+      </nav>
+    </header>
+
+    <main id="quiz-container">
+      <div id="question-container">
+        <p id="question">Hoe noem je een Koele koe in een kast?</p>
+        <div class="answers">
+          <button class="answer-btn">Koelkast</button>
+          <button class="answer-btn">Koederij</button>
+          <button class="answer-btn">Moelast</button>
+          <button class="answer-btn">Koederbij</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <h4>Regels & Credits</h4>
+        <p>
+            Regels voor de Quiz:
+            De quiz bestaat uit 100 vragen. Je moet elke vraag beantwoorden voordat je naar de volgende kunt gaan.
+            
+            Tijdsbeperkingen:
+            Elke vraag moet binnen 10 seconden beantwoord worden. Als je niet op tijd antwoordt, wordt je antwoord automatisch overgeslagen en ga je verder naar de volgende vraag.
+            
+            Antwoorden:
+            
+            Voor elke vraag krijg je vier antwoordmogelijkheden. Kies het juiste antwoord door op de bijbehorende knop te klikken.
+            
+            Er is maar één correct antwoord per vraag. De rest van de antwoorden zijn afleidingen.
+            
+            Punten:
+            
+            Voor elke vraag krijg je 1 punt voor het juiste antwoord.
+            
+            Foute antwoorden leveren geen punten op.
+            
+            Volgorde:
+            
+            De vragen worden in willekeurige volgorde gepresenteerd, zodat je niet kunt gokken op basis van eerdere vragen.
+            
+            Navigeer alleen vooruit:
+            
+            Je kunt alleen verder gaan naar de volgende vraag nadat je een antwoord hebt gekozen. Je kunt niet teruggaan naar een vorige vraag.
+            
+            Einde van de quiz:
+            
+            Aan het einde van de quiz ontvang je je eindscore. Dit wordt gemeten door het aantal vragen dat je correct hebt beantwoord.
+            
+            Bij het einde krijg je de mogelijkheid om je score op te slaan of opnieuw te spelen.
+            
+            Geen hulp van buitenaf:
+            
+            Hulp van anderen of het gebruik van internet om antwoorden te vinden is niet toegestaan. De quiz is bedoeld om jouw kennis te testen.
+            
+            Gedrag:
+            
+            Gedraag je netjes en respectvol tegenover andere spelers. Ongepast gedrag kan leiden tot diskwalificatie.
+            
+            Eerlijk spelen:
+            
+            Iedereen heeft gelijke kansen, dus wees eerlijk en probeer je best te doen!<br />quizz gemaakt door
+          Thijmen Bastiaan ©
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>CS Links</h4>
+        <div class="cs links">
+          <a href="https://www.w3schools.com/">w3schools</a> <br>
+          <a href="https://stackoverflow.com/questions">Stack overflow</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Tech Nieuws</h4>
+            <a href="https://www.technewsworld.com/">Tech News World</a>
+            <a href="https://www.wired.com/">Wired</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
