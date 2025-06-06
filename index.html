@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>mijn project</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
@@ -14,6 +14,48 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <style>
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      /* Navbar dark mode */
+      body.dark-mode .navbar {
+        background-color: #1f1f1f !important;
+      }
+      body.dark-mode .navbar .navbar-brand,
+      body.dark-mode .navbar .nav-link,
+      body.dark-mode .navbar .form-check-label {
+        color: #eee !important;
+      }
+      body.dark-mode .navbar .nav-link.active {
+        color: #0d6efd !important; /* Bootstrap primary */
+      }
+      body.dark-mode .navbar-toggler {
+        filter: invert(1);
+      }
+
+      body.dark-mode .card {
+        background-color: #2a2a2a;
+        color: #fff;
+      }
+
+      body.dark-mode .bg-light {
+        background-color: #1e1e1e !important;
+      }
+
+      body.dark-mode .btn-primary {
+        background-color: #0066cc;
+        border-color: #0066cc;
+      }
+
+      body.dark-mode .form-control {
+        background-color: #2a2a2a;
+        color: #fff;
+        border: 1px solid #555;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -47,6 +89,19 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
+          <div class="form-check form-switch ms-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="darkModeToggle"
+              aria-label="Toggle dark mode"
+            />
+            <label
+              class="form-check-label text-dark"
+              for="darkModeToggle"
+              >Dark Mode</label
+            >
+          </div>
         </div>
       </div>
     </nav>
@@ -60,13 +115,15 @@
       </div>
     </section>
 
-       <div class="d-flex justify-content-center align-items-center">
-  <img src="img/unnamed.jpg" 
-       class="rounded-circle" 
-       alt="Placeholder afbeelding" 
-       width="150" 
-       style="object-fit: cover;">
-</div>
+    <div class="d-flex justify-content-center align-items-center">
+      <img
+        src="img/unnamed.jpg"
+        class="rounded-circle"
+        alt="Placeholder afbeelding"
+        width="150"
+        style="object-fit: cover;"
+      />
+    </div>
 
     <section id="about" class="bg-light py-5">
       <div class="container text-center">
@@ -77,7 +134,7 @@
           van slimme, gebruiksvriendelijke oplossingen. Ik haal energie uit het
           bedenken van creatieve oplossingen voor technische uitdagingen en werk
           graag aan projecten waarbij ik zowel mijn analytisch vermogen als mijn
-          creativiteit kan inzetten.<br></br>Tijdens mijn studie heb ik ervaring
+          creativiteit kan inzetten.<br /><br />Tijdens mijn studie heb ik ervaring
           opgedaan met het ontwerpen en bouwen van softwaretoepassingen, zowel
           zelfstandig als in teamverband. Ik vind het belangrijk om niet alleen
           goed werkende software te maken, maar ook om te zorgen voor een goede
@@ -85,8 +142,7 @@
           ontwikkelproces. Ik ben leergierig, nauwkeurig en altijd op zoek naar
           manieren om mezelf verder te ontwikkelen — zowel technisch als
           persoonlijk. Neem gerust een kijkje in mijn portfolio om te zien waar
-          ik mee bezig ben geweest! Laat me weten of je de tekst iets formeler,
-          creatiever of persoonlijker wilt.
+          ik mee bezig ben geweest!
         </p>
       </div>
     </section>
@@ -188,7 +244,7 @@
               <div class="card-body">
                 <h5 class="card-title">4 op een rij</h5>
                 <p class="card-text">
-                  Speel met 2 persononen en probeer 4 op een rij te krijgen
+                  Speel met 2 personen en probeer 4 op een rij te krijgen
                 </p>
                 <a class="btn btn-primary" href="connect 4/index.html"
                   >Proberen</a
@@ -273,5 +329,21 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const toggle = document.getElementById("darkModeToggle");
+      const label = document.querySelector(".form-check-label");
+
+      toggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          label.classList.remove("text-dark");
+          label.classList.add("text-light");
+        } else {
+          label.classList.remove("text-light");
+          label.classList.add("text-dark");
+        }
+      });
+    </script>
   </body>
 </html>
